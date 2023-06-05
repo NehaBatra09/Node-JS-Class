@@ -4,14 +4,15 @@ import React, { useEffect, useRef, createRef, useState } from "react";
 export default function Refe() {
     const [counter, setCounter] = useState(0);
     const ref = createRef();
-
+    const usRef = useRef()
     useEffect(() => {
         ref.current = "GeeksforGeeeks";
+        usRef.current = "GeeksforGeeeks"
     }, []);
 
     useEffect(
         () => {
-            console.log(counter, ref.current);
+            console.log(counter, " -- ", ref.current, " -- ", usRef.current);
         },
         [counter]
     );
@@ -19,7 +20,7 @@ export default function Refe() {
     return (
         <div >
 
-            <h3>Example on createRef</h3>
+            <h3>Example on createRef and useRef</h3>
             <button onClick={() => setCounter((c) => c + 1)}>
                 Increment
             </button>
