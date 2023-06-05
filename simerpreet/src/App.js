@@ -29,11 +29,18 @@ import { PropSolution } from './components/Class-1-31/PropDrilling-Sol';
 import GameMgr from './components/Class-1-31/Child-Parent-2';
 import { ParentComponent } from './components/Class-1-31/Controlled-UnControlled';
 import { ClassPropValidation, FunPropValidation } from './components/Class-1-31/PropValidation';
+import { ReducerHook } from './components/Class-1-31/Hooks/useReducerHook-1';
+import { CallBackHook } from './components/Class-1-31/Hooks/useCallBackHook-1';
+import { UseMemoHook } from './components/Class-1-31/Hooks/useMemoHook/UseMemoHook-1';
+import { UseEffectHook } from './components/Class-1-31/Hooks/useEffectHook/UseEffectHook-1';
 export default function App() {
 
     const [toggle, setToggle] = useState(false)
     const [posts, setPosts] = useState([{ id: "1" }])
     const [users, setUsers] = useState([{ id: "1" }])
+    setTimeout(() => {
+        setToggle(true)
+    }, 3000);
     // let data = {
 
     //     getPosts: async function () {
@@ -81,9 +88,15 @@ export default function App() {
         {/* <PropDrill/> */}
         {/* <PropSolution/> */}
         {/* <GameMgr/> */}
-        
+
         {/* <FunPropValidation isAdmin={"admin"} age={17}/> */}
-        <ClassPropValidation name={"neha"}/>
+        {/* <ClassPropValidation name={"neha"}/> */}
+        {/* <ReducerHook/> */}
+        {/* <CallBackHook /> */}
+        {/* <UseMemoHook /> */}
+
+        {/* <UseEffectHook /> */}
+        {/* {!toggle && <UseEffectHook />} */}
     </>
     );
 }
