@@ -14,6 +14,7 @@ export const Parent = () => {
         </div>
     );
 };
+
 const Child = ({ message,obj }) => {
     const [msg, setMessage] = useState(message)
 

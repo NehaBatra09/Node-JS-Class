@@ -33,14 +33,18 @@ import { ReducerHook } from './components/Class-1-31/Hooks/useReducerHook-1';
 import { CallBackHook } from './components/Class-1-31/Hooks/useCallBackHook-1';
 import { UseMemoHook } from './components/Class-1-31/Hooks/useMemoHook/UseMemoHook-1';
 import { UseEffectHook } from './components/Class-1-31/Hooks/useEffectHook/UseEffectHook-1';
+import Refe, { MyComponent, UserForm } from './components/Class-1-31/Refernce';
+import { StateExample } from './components/Class-1-31/StateExample';
+import { ShadowDOMEx } from './components/Class-1-31/ShadowDOM-1';
+import { Class2 } from './components/Class-1-31/LifeCycle';
 export default function App() {
 
     const [toggle, setToggle] = useState(false)
     const [posts, setPosts] = useState([{ id: "1" }])
     const [users, setUsers] = useState([{ id: "1" }])
-    setTimeout(() => {
-        setToggle(true)
-    }, 3000);
+    // setTimeout(() => {
+    //     setToggle(true)
+    // }, 3000);
     // let data = {
 
     //     getPosts: async function () {
@@ -86,7 +90,7 @@ export default function App() {
 
         {/* <Parent/> */}
         {/* <PropDrill/> */}
-        {/* <PropSolution/> */}
+        <PropSolution/>
         {/* <GameMgr/> */}
 
         {/* <FunPropValidation isAdmin={"admin"} age={17}/> */}
@@ -97,6 +101,11 @@ export default function App() {
 
         {/* <UseEffectHook /> */}
         {/* {!toggle && <UseEffectHook />} */}
+        {/* <UserForm/> */}
+        {/* <MyComponent/> */}
+        {/* <StateExample/> */}
+        {/* <Class2/> */}
+        {/* <ShadowDOMEx/> */}
     </>
     );
 }

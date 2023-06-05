@@ -1,10 +1,10 @@
-
 import React, { useEffect, useRef, createRef, useState } from "react";
 
 export default function Refe() {
     const [counter, setCounter] = useState(0);
     const ref = createRef();
     const usRef = useRef()
+
     useEffect(() => {
         ref.current = "GeeksforGeeeks";
         usRef.current = "GeeksforGeeeks"
@@ -30,3 +30,33 @@ export default function Refe() {
 }
 
 
+export class MyComponent extends React.Component {
+    constructor(props) {
+        super(props);
+        // this.myRef = React.createRef();
+    }
+    render() {
+
+        return (<><input type="text" ref={(input) => this.myRef = input} />
+
+            <button onClick={() => console.log(this.myRef.value)}></button>
+        </>);
+    }
+}
+
+export class UserForm extends React.Component {
+    handleSubmit = (e) => {
+        e.preventDefault()
+        console.log("Input Value is: ", this.inputRef.value)
+    }
+    render() {
+        return (
+            <form onSubmit={this.handleSubmit}>
+                <input
+                    type='text'
+                    ref={(input) => this.inputRef = input} /> // Access DOM input in handle submit
+                <button type='submit'>Submit</button>
+            </form>
+        )
+    }
+}

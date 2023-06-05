@@ -1,6 +1,6 @@
 import React from "react";
 
-export class Class2 extends React.Component {
+export class Class2 extends React.PureComponent {
     constructor() {
         super()
         this.state = {
@@ -14,20 +14,18 @@ export class Class2 extends React.Component {
         }, 2000);
         // debugger
     }
-    shouldComponentUpdate() {
-        // debugger
-        return true
-    }
+   
     componentDidUpdate() {
         console.log(this.state.name)
         // debugger
-        setTimeout(() => {
+        setInterval(() => {
             this.setState({ name: "kanu" })
         }, 2000);
         // debugger
     }
     componentWillUnmount() {
         console.log("Unmounting phase")
+
     }
     render() {
 

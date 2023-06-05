@@ -9,10 +9,12 @@ export const PropDrill = () => {
 }
 const Child = ({ message, setMessage }) => {
 
-    return (<> Child Message: {message}<GrandChild setMessage={setMessage} /><button onClick={() => setMessage("Good Evening Child!")}> Child</button> </>)
+    return (<> Child Message: {message}<GrandChild setMessage={setMessage} message={message
+    }/><button onClick={() => setMessage("Good Evening Child!")}> Child</button> </>)
 
 }
-const GrandChild = ({ setMessage }) => {
 
-    return <><br/> <button onClick={() => setMessage("Good Evening GrandChild!")}>GrandChild</button></>
+const GrandChild = ({message, setMessage }) => {
+
+    return <><br/> {message}<br/><button onClick={() => setMessage("Good Evening GrandChild!")}>GrandChild</button></>
 }
