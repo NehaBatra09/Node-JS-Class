@@ -90,7 +90,7 @@ export default function App() {
 
         {/* <Parent/> */}
         {/* <PropDrill/> */}
-        <PropSolution/>
+        {/* <PropSolution/> */}
         {/* <GameMgr/> */}
 
         {/* <FunPropValidation isAdmin={"admin"} age={17}/> */}

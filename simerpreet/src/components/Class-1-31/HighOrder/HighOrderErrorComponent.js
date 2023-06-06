@@ -5,7 +5,7 @@ export const ErrorEnhancedComponent = (WrapperComponent, role) => {
 
 
 
-    class Logger extends React.Component {
+    class ErrorBoundries extends React.Component {
 
         constructor(props) {
             super(props)
@@ -29,6 +29,6 @@ export const ErrorEnhancedComponent = (WrapperComponent, role) => {
         }
 
     }
-    return Logger
+    return ErrorBoundries
 
 }
