@@ -68,6 +68,20 @@ export default function App() {
         // setUsers(await data.getUsers())
 
     }
+   
+    let obj = {
+        age: 'neha',
+        innerObj: {
+            name: 'kavita',
+
+            getData: () => {
+                console.log(this)
+            },
+        },
+
+    };
+    obj.innerObj.getData();
+
 
     // const PostHighOrder = EnhancedComponent(Posts, "users")
     // const UsersHighOrder = EnhancedComponent(Users, "admin")
@@ -86,7 +100,7 @@ export default function App() {
         {/* {(!toggle) ? <ImpureComponent /> : <Class1 />} */}
         {/* <Class5/> */}
         {/* <Test/> */}
-        {/* <ParentComponent /> */}
+        <ParentComponent />
 
         {/* <Parent/> */}
         {/* <PropDrill/> */}
