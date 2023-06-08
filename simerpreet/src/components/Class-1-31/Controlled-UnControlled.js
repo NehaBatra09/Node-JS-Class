@@ -22,22 +22,22 @@ export class ParentComponent extends React.Component {
         return (
             <div>
                 <span style={{ color: `${this.state.colo}` }}>MCA</span>
-                <input type="text" ref={this.inputRef} />
+                {/* <input type="text" ref={this.inputRef} />
                 <input type="checkbox"  checked={this.state.isChecked} onChange={this.handleCheckboxChange.bind(this)}/>
                 
                 <select ref={this.selectRef}>
                     <option value={"0"}>Select</option>
                     <option value={"1"}>One</option>
                     <option value={"2"}>Two</option>
-                </select>
+                </select> */}
                 {this.state.number}
-                {/* <Checkbox
+                <Checkbox
                     checked={this.state.isChecked}
                     onChange={this.handleCheckboxChange.bind(this)}
                 />
                 <Inputbox ref={this.inputRef}
                 />
-                <SelectBox /> */}
+                <SelectBox />
                 {/* <button onClick={() => this.handleCheckboxChange()}>click</button> */}
                 {/* <p>Checkbox is {this.state.isChecked ? 'checked' : 'unchecked'}</p> */}
             </div>

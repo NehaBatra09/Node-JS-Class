@@ -37,6 +37,7 @@ import Refe, { MyComponent, UserForm } from './components/Class-1-31/Refernce';
 import { StateExample } from './components/Class-1-31/StateExample';
 import { ShadowDOMEx } from './components/Class-1-31/ShadowDOM-1';
 import { Class2 } from './components/Class-1-31/LifeCycle';
+import { User } from './components/Class-2-31/ParentToChild-1';
 export default function App() {
 
     const [toggle, setToggle] = useState(false)
@@ -100,7 +101,7 @@ export default function App() {
         {/* {(!toggle) ? <ImpureComponent /> : <Class1 />} */}
         {/* <Class5/> */}
         {/* <Test/> */}
-        <ParentComponent />
+        {/* <ParentComponent /> */}
 
         {/* <Parent/> */}
         {/* <PropDrill/> */}
@@ -120,6 +121,8 @@ export default function App() {
         {/* <StateExample/> */}
         {/* <Class2/> */}
         {/* <ShadowDOMEx/> */}
+
+        <User/>
     </>
     );
 }
