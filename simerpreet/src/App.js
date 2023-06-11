@@ -1,22 +1,30 @@
 import React, { Suspense, useEffect, useState } from 'react';
 import './style.css';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import userEvent from '@testing-library/user-event';
-import { User } from './components/Class-2-31/ParentToChild-1';
+import { TodoHeader } from './components/Projects/Todo-1/TodoHeader';
+// import { TodoHeader } from './components/Projects/Todo/TodoHeader';
+// import { TodoContent } from './components/Projects/Todo/TodoContent';
 
 export default function App() {
-
-
+    // const [todo, setTodoList] = useState([])
+    // const [filterStatus, setFilterStatus] = useState(false)
+    // console.log(todo,"---")
 
     return (<>
-        <Router>
+        {/* <TodoHeader todo={todo} addTodoList={setTodoList} setFilterStatus={setFilterStatus} /> */}
+        {/* <TodoContent todo={todo} filterStatus={filterStatus} /> */}
 
+        {/* <Router>
             <Routes>
-
-                <Route element={User} path='/user' />
-
+                <Route render={props=><Header handleSubmit={this.handleSubmit} history={props.history}/>}/>
+                <Route path="/mountain" render={() => <Item searchItem={searchItem} />} />
+                <Route path="/beach" render={() => <Item searchItem={searchItem} />} />
+                <Route path="/bird" render={() => <Item searchItem={searchItem} />} />
+                <Route path='/search/:searchInput' render={(props) => <Search searchItem={props.match.params.searchInput} />} />
+                <Route component={<NotFound />} />
             </Routes>
-        </Router>
+        </Router> */}
+<TodoHeader/>
 
     </>)
 
