@@ -4,7 +4,6 @@ export const TodoHeader = () => {
     const [status, setStatus] = useState("completed")
     const [title, setTitle] = useState("")
     const [index, setIndex] = useState(null)
-    const [filterStatus, setFilterStatus] = useState("all")
     const [filterTodoList, setfilterTodoList] = useState([])
     const addToDoList = () => {
         todo.push({ title, status })
@@ -15,9 +14,17 @@ export const TodoHeader = () => {
         setfilterTodoList(todo.filter((task) => filterStatus != "all" ? task.status == filterStatus : true))
     }
     const handleDelete = (index) => {
-        todo.splice(index,1)
+        console.log(index)
+        todo.splice(index, 1)
         console.log(todo)
         setfilterTodoList([...todo])
+    }
+    const handleEdit = (index) => {
+
+        todo[index].title = title
+        todo[index].status = status
+        setfilterTodoList([...todo])
+
     }
 
     return (<>
@@ -35,9 +42,9 @@ export const TodoHeader = () => {
         </select>
         <button onClick={() => addToDoList()}>Add Task</button>
         <ul>
-            {filterTodoList.length > 0 ? filterTodoList.map((task, index) => <li>{task.title} {task.status}
-                <button >edit</button>
-                <button onClick={() => handleDelete(index+"")}>delete</button>
+            {filterTodoList.length > 0 ? filterTodoList.map((task, index) => <li key={task+index}>{task.title} {task.status}
+                <button onClick={() => handleEdit(index)} >edit</button>
+                <button onClick={() => handleDelete(index)}>delete</button>
 
             </li>) : "No task found"}
         </ul>

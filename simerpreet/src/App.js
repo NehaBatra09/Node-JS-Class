@@ -2,11 +2,14 @@ import React, { Suspense, useEffect, useState } from 'react';
 import './style.css';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import { TodoHeader } from './components/Projects/Todo-1/TodoHeader';
+import { TodoHead } from './components/Projects/Todo-1/TodoHead';
+import { TodoContent } from './components/Projects/Todo-1/TodoContent';
 // import { TodoHeader } from './components/Projects/Todo/TodoHeader';
 // import { TodoContent } from './components/Projects/Todo/TodoContent';
 
 export default function App() {
-    // const [todo, setTodoList] = useState([])
+    const [todo, setTodoList] = useState([])
+    const[updatedTodoList,setUpdatedTodoList]=useState([])
     // const [filterStatus, setFilterStatus] = useState(false)
     // console.log(todo,"---")
 
@@ -24,8 +27,10 @@ export default function App() {
                 <Route component={<NotFound />} />
             </Routes>
         </Router> */}
-<TodoHeader/>
+        {/* <TodoHeader/> */}
 
+        <TodoHead todo={todo} setTodoList={setUpdatedTodoList} />
+        <TodoContent  todo={updatedTodoList}/>
     </>)
 
 }
