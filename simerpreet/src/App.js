@@ -16,7 +16,7 @@ export default function App() {
     return (<>
         {/* <TodoHeader todo={todo} addTodoList={setTodoList} setFilterStatus={setFilterStatus} /> */}
         {/* <TodoContent todo={todo} filterStatus={filterStatus} /> */}
-
+{/* <TodoHeader/> */}
         {/* <Router>
             <Routes>
                 <Route render={props=><Header handleSubmit={this.handleSubmit} history={props.history}/>}/>
@@ -27,10 +27,10 @@ export default function App() {
                 <Route component={<NotFound />} />
             </Routes>
         </Router> */}
-        {/* <TodoHeader/> */}
+        <TodoHeader/>
 
-        <TodoHead todo={todo} setTodoList={setUpdatedTodoList} />
-        <TodoContent  todo={updatedTodoList}/>
+        {/* <TodoHead todo={todo} setTodoList={setUpdatedTodoList} />
+        <TodoContent  todo={updatedTodoList}/> */}
     </>)
 
 }
