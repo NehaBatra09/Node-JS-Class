@@ -1,22 +1,41 @@
 import React, { Suspense, useEffect, useState } from 'react';
 import './style.css';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import { TodoHeader } from './components/Projects/Todo-1/TodoHeader';
+// import { TodoHeader } from './components/Projects/Todo-1/TodoHeader';
 import { TodoHead } from './components/Projects/Todo-1/TodoHead';
 import { TodoContent } from './components/Projects/Todo-1/TodoContent';
-// import { TodoHeader } from './components/Projects/Todo/TodoHeader';
+import { UserReducerCounter, UserReducerEx } from './components/Class-1-31/Redux/UserReducerEx';
+import { Counter } from './components/Class-1-31/Redux/Redux-1/Counter';
+import { Provider } from 'react-redux';
+import { store } from './components/Class-1-31/Redux/Redux-1/store';
+import { TodoHeader } from './components/Projects/Todo/TodoHeader';
+import { Parent } from './components/Parent';
 // import { TodoContent } from './components/Projects/Todo/TodoContent';
 
 export default function App() {
+
+
     const [todo, setTodoList] = useState([])
-    const[updatedTodoList,setUpdatedTodoList]=useState([])
-    // const [filterStatus, setFilterStatus] = useState(false)
-    // console.log(todo,"---")
+    const [updatedTodoList, setUpdatedTodoList] = useState([])
+    const [filterStatus, setFilterStatus] = useState(false)
 
     return (<>
-        {/* <TodoHeader todo={todo} addTodoList={setTodoList} setFilterStatus={setFilterStatus} /> */}
-        {/* <TodoContent todo={todo} filterStatus={filterStatus} /> */}
-{/* <TodoHeader/> */}
+
+<Parent/>
+
+
+
+        {/* <TodoHead todo={todo} setTodoList={setUpdatedTodoList} />
+        <TodoContent todo={updatedTodoList} /> */}
+
+
+        {/* <TodoHeader todo={todo} addTodoList={setTodoList} setFilterStatus={setFilterStatus} />
+        <TodoContent todo={todo} filterStatus={filterStatus} />
+ */}
+
+
+
+        {/* <TodoHeader/> */}
         {/* <Router>
             <Routes>
                 <Route render={props=><Header handleSubmit={this.handleSubmit} history={props.history}/>}/>
@@ -27,10 +46,14 @@ export default function App() {
                 <Route component={<NotFound />} />
             </Routes>
         </Router> */}
-        <TodoHeader/>
+        {/* <TodoHeader/> */}
 
-        {/* <TodoHead todo={todo} setTodoList={setUpdatedTodoList} />
-        <TodoContent  todo={updatedTodoList}/> */}
+
+        {/* <UserReducerCounter/> */}
+        {/* <Provider store={store}>
+            <Counter />
+        </Provider> */}
+        {/* <TodoHeader/> */}
     </>)
 
 }

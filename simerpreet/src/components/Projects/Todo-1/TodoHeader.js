@@ -5,6 +5,7 @@ export const TodoHeader = () => {
     const [title, setTitle] = useState("")
     const [index, setIndex] = useState(null)
     const [filterTodoList, setfilterTodoList] = useState([])
+
     const addToDoList = () => {
         todo.push({ title, status })
         setfilterTodoList([...todo])
@@ -35,12 +36,18 @@ export const TodoHeader = () => {
         </select>
         <br />
 
+
         Title:<input type="text" onChange={(e) => setTitle(e.target.value)} /><br />
         staus: <select onChange={(e) => setStatus(e.target.value)}><br />
             <option value={"completed"}>completed</option>
             <option value={"incomplete"}>incomplete</option>
         </select>
+
         <button onClick={() => addToDoList()}>Add Task</button>
+
+
+
+
         <ul>
             {filterTodoList.length > 0 ? filterTodoList.map((task, index) => <li key={task+index}>{task.title} {task.status}
                 <button onClick={() => handleEdit(index)} >edit</button>
