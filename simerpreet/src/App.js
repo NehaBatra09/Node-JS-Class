@@ -1,15 +1,16 @@
 import React, { Suspense, useEffect, useState } from 'react';
 import './style.css';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { UserReducerCounter, UserReducerProduct } from './components/Class-1-31/Redux/UserReducerEx';
 // import { TodoHeader } from './components/Projects/Todo-1/TodoHeader';
-import { TodoHead, TodoInSinglFile } from './components/Projects/Todo/TodoInSinglFile';
-import { TodoContent } from './components/Projects/Todo-1/TodoContent';
-import { UserReducerCounter, UserReducerEx } from './components/Class-1-31/Redux/UserReducerEx';
-import { Counter } from './components/Class-1-31/Redux/Redux-1/Counter';
+// import { TodoHead, TodoInSinglFile } from './components/Projects/Todo/TodoInSinglFile';
+// import { TodoContent } from './components/Projects/Todo-1/TodoContent';
+// import { UserReducerCounter, UserReducerEx } from './components/Class-1-31/Redux/UserReducerEx';
+// import { Counter } from './components/Class-1-31/Redux/Redux-1/Counter';
 import { Provider } from 'react-redux';
-import { store } from './components/Class-1-31/Redux/Redux-1/store';
-import { TodoHeader } from './components/Projects/Todo/TodoHeader';
-import { Parent } from './components/Parent';
+// import { store /} from './components/Class-1-31/Redux/Redux-1/store';
+// import { TodoHeader/ } from './components/Projects/Todo/TodoHeader';
+// import { Parent } from './components/Parent';
 // import { TodoContent } from './components/Projects/Todo/TodoContent';
 
 export default function App() {
@@ -20,7 +21,9 @@ export default function App() {
     const [filterStatus, setFilterStatus] = useState(false)
 
     return (<>
-        {/* <UserReducerCounter/> */}
+
+        {/* <UserReducerCounter /> */}
+        {/* <UserReducerProduct /> */}
 
         {/* <Provider store={store}>
             <Counter />
