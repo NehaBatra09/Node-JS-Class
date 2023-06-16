@@ -34,6 +34,8 @@ const GrandChild1 = () => {
         <button onClick={() => handleChange({ dark: "Dark Blue", light: "Light Blue" })}>Change Child1 Theme</button>
         <GrandChild2 /></>
 }
+
+
 const GrandChild2 = () => {
     const { theme, handleChange } = useContext(Context)
     return <><br /> Grand Child2 Theme {theme.dark} {theme.light} <button onClick={() => handleChange({ dark: "Dark Green", light: "Light Green" })}>Change Child2 Theme</button></>

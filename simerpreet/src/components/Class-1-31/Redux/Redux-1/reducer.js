@@ -1,10 +1,13 @@
+let initialState = {
+    count: 0
+}
 
-const counterReducer=(state=1,action)=>{
+const counterReducer = (state = initialState, action) => {
     if (action.type === "INCREMENT") {
-        return { ...state, count: state + 1 }
+        return { ...state, count: state.count + 1 }
     }
     if (action.type === "DECREMENT") {
-        return { ...state, count: state - 1 }
+        return { ...state, count: state.count - 1 }
     }
     return state
 }

@@ -1,19 +1,34 @@
 import React, { useState } from "react";
+import { TodoModal } from "./TodoModal";
 import Dialog from '@mui/material/Dialog';
 import DialogTitle from '@mui/material/DialogTitle';
 import DialogContent from '@mui/material/DialogContent';
 import Button from '@mui/material/Button';
 import DialogActions from '@mui/material/DialogActions';
 
-export const TodoModal = ({ todo, setTodoList, open, setModal }) => {
+export const TodoInSinglFile = ({ todo, setTodoList }) => {
+
+    const [open, setOpen] = useState(false)
     const [title, setTitle] = useState("")
     const [status, setStatus] = useState("completed")
+
+    const handleFilter = (filterStatus) => {
+        setTodoList(todo.filter((ele) => filterStatus != "all" ? ele.status == filterStatus : true))
+    }
 
     const handleSubmit = () => {
         todo.push({ title, status })
         setTodoList([...todo])
     }
+
     return (<>
+        <button onClick={() => setOpen(true)}>Open  Add Task Modal</button>
+        <select onChange={(e) => handleFilter(e.target.value)}>
+            <option value={"all"}>All</option>
+            <option value={"completed"}>completed</option>
+            <option value={"incomplete"}>incomplete</option>
+        </select>
+
         <Dialog
             sx={{ '& .MuiDialog-paper': { width: '80%', maxHeight: 435 } }}
             maxWidth="xs"
@@ -28,7 +43,7 @@ export const TodoModal = ({ todo, setTodoList, open, setModal }) => {
 
             </DialogContent>
             <DialogActions>
-                <Button onClick={() => setModal(false)}>
+                <Button onClick={() => setOpen(false)}>
                     Cancel
                 </Button>
                 <Button onClick={() => handleSubmit()}>
@@ -36,5 +51,6 @@ export const TodoModal = ({ todo, setTodoList, open, setModal }) => {
                 </Button>
             </DialogActions>
         </Dialog>
+        {/* <TodoModal todo={todo} setTodoList={setTodoList}  open={open} setModal={setOpen}/> */}
     </>)
 }

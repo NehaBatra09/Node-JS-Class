@@ -2,7 +2,7 @@ import React, { Suspense, useEffect, useState } from 'react';
 import './style.css';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 // import { TodoHeader } from './components/Projects/Todo-1/TodoHeader';
-import { TodoHead } from './components/Projects/Todo-1/TodoHead';
+import { TodoHead, TodoInSinglFile } from './components/Projects/Todo/TodoInSinglFile';
 import { TodoContent } from './components/Projects/Todo-1/TodoContent';
 import { UserReducerCounter, UserReducerEx } from './components/Class-1-31/Redux/UserReducerEx';
 import { Counter } from './components/Class-1-31/Redux/Redux-1/Counter';
@@ -20,22 +20,21 @@ export default function App() {
     const [filterStatus, setFilterStatus] = useState(false)
 
     return (<>
+        {/* <UserReducerCounter/> */}
 
-<Parent/>
+        {/* <Provider store={store}>
+            <Counter />
+        </Provider> */}
 
+        {/* <Parent/> */}
 
-
-        {/* <TodoHead todo={todo} setTodoList={setUpdatedTodoList} />
+        {/* 1.... <TodoInSinglFile todo={todo} setTodoList={setUpdatedTodoList} />
         <TodoContent todo={updatedTodoList} /> */}
 
-
-        {/* <TodoHeader todo={todo} addTodoList={setTodoList} setFilterStatus={setFilterStatus} />
+        {/*2... <TodoHeader todo={todo} addTodoList={setTodoList} setFilterStatus={setFilterStatus} />
         <TodoContent todo={todo} filterStatus={filterStatus} />
- */}
+         */}
 
-
-
-        {/* <TodoHeader/> */}
         {/* <Router>
             <Routes>
                 <Route render={props=><Header handleSubmit={this.handleSubmit} history={props.history}/>}/>
@@ -46,14 +45,6 @@ export default function App() {
                 <Route component={<NotFound />} />
             </Routes>
         </Router> */}
-        {/* <TodoHeader/> */}
-
-
-        {/* <UserReducerCounter/> */}
-        {/* <Provider store={store}>
-            <Counter />
-        </Provider> */}
-        {/* <TodoHeader/> */}
     </>)
 
 }
