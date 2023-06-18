@@ -1,10 +1,29 @@
 import React, { useReducer, useState } from "react";
-import { reducer, initialState } from './ReducerData'
+// import { reducer, initialState } from './ReducerData'
 
 export const UserReducerCounter = () => {
 
+    const initialState = {
+        count: 0,
+    }
+    const reducer = (state, action) => {
+
+        if (action.type === "INCREMENT") {
+            return { ...state, count: state.count + 1 }
+        }
+        if (action.type === "DECREMENT") {
+            return { ...state, count: state.count - 1 }
+        }
+        return state
+
+    }
+
+
+
     const [state, dispatch] = useReducer(reducer, initialState)
     const { count } = state
+
+
 
     const Increment = () => {
         dispatch({ type: "INCREMENT" })
@@ -29,7 +48,7 @@ export const UserReducerProduct = () => {
             return { ...state, product: [...state.product, action.data] }
         }
         if (action.type === "REMOVE_PRODUCT") {
-            return { ...state, product: state.product.filter((item, ind) => ind != action.data) }
+            return { ...state, product: state.product.filter((item, ind) => item != action.data) }
 
             // return { ...state, product: state.product.filter((item) => item != action.data) }
         }

@@ -8,6 +8,7 @@ import { UserReducerCounter, UserReducerProduct } from './components/Class-1-31/
 // import { UserReducerCounter, UserReducerEx } from './components/Class-1-31/Redux/UserReducerEx';
 // import { Counter } from './components/Class-1-31/Redux/Redux-1/Counter';
 import { Provider } from 'react-redux';
+import UserReducer from './components/Class-1-31/Redux/UserReducer-2';
 // import { store /} from './components/Class-1-31/Redux/Redux-1/store';
 // import { TodoHeader/ } from './components/Projects/Todo/TodoHeader';
 // import { Parent } from './components/Parent';
@@ -21,6 +22,7 @@ export default function App() {
     const [filterStatus, setFilterStatus] = useState(false)
 
     return (<>
+        <UserReducer />
 
         {/* <UserReducerCounter /> */}
         {/* <UserReducerProduct /> */}
