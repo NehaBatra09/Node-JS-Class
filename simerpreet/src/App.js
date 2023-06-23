@@ -9,6 +9,8 @@ import { UserReducerCounter, UserReducerProduct } from './components/Class-1-31/
 // import { Counter } from './components/Class-1-31/Redux/Redux-1/Counter';
 import { Provider } from 'react-redux';
 import UserReducer from './components/Class-1-31/Redux/UserReducer-2';
+import { UseCallback1, UseEffectHook4 } from './components/Class-1-31/Hooks/useEffectHook/UseEffectHook-4';
+// import { UseEffectHook } from './components/Class-1-31/Hooks/useEffectHook/UseEffectHook-3';
 // import { store /} from './components/Class-1-31/Redux/Redux-1/store';
 // import { TodoHeader/ } from './components/Projects/Todo/TodoHeader';
 // import { Parent } from './components/Parent';
@@ -22,7 +24,9 @@ export default function App() {
     const [filterStatus, setFilterStatus] = useState(false)
 
     return (<>
-        <UserReducer />
+        <UseCallback1/>
+        {/* <UseEffectHook4/> */}
+        {/* <UserReducer /> */}
 
         {/* <UserReducerCounter /> */}
         {/* <UserReducerProduct /> */}

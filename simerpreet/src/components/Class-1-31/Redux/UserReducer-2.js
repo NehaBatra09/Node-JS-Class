@@ -1,4 +1,3 @@
-import { accordionActionsClasses } from "@mui/material";
 import React, { useReducer, useState } from "react";
 const UserReducer = () => {
 
@@ -16,7 +15,7 @@ const UserReducer = () => {
 
             case "UPDATE_USER_PASSWORD":
                 console.log(state, action.id)
-                let ind = state.list.filter((user, index) => user.email == action.id)
+                let ind = state.list.filter((user, index) => user.id == action.id)
                 console.log(ind, action.password)
                 ind = state.list.indexOf(ind[0])
                 state.list[ind]["password"] = action.password
@@ -37,7 +36,7 @@ const UserReducer = () => {
 
     const handleAddUser = () => {
 
-        userDetails["id"] = userDetails.password
+        userDetails["id"] = userDetails.email
         dispatch({ type: "ADD_USER", user: userDetails })
     }
     const handleDeleteUser = () => {
