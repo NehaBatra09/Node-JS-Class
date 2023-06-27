@@ -15,7 +15,7 @@ export const UseMemoHook = () => {
     return (<>
         {count}
         <br />
-        {processData.map((ele) => <li>{ele}</li>)}
+        {processData().map((ele) => <li>{ele}</li>)}
 
     </>)
 

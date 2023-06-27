@@ -4,3 +4,5 @@ import counterReducer from "./reducer"
 export const store = legacy_createStore(
     counterReducer
 )
+
+console.log(store.getState())

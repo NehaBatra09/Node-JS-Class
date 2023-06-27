@@ -45,15 +45,15 @@ export const UserReducerProduct = () => {
     const reducer = (state, action) => {
 
         if (action.type === "ADD_PRODUCT") {
-            return { ...state, product: [...state.product, action.data] }
+            return { ...state, product: [...state.product, action.product] }
         }
         if (action.type === "REMOVE_PRODUCT") {
-            return { ...state, product: state.product.filter((item, ind) => item != action.data) }
+            return { ...state, product: state.product.filter((item, ind) => item != action.product) }
 
             // return { ...state, product: state.product.filter((item) => item != action.data) }
         }
         if (action.type === "UPDATE_PRODUCT") {
-            state.product[action.index] = action.data
+            state.product[action.index] = action.product
             return { ...state }
         }
         return state
@@ -64,13 +64,13 @@ export const UserReducerProduct = () => {
     const [index, setIndex] = useState(0)
 
     const AddProduct = () => {
-        dispatch({ type: "ADD_PRODUCT", data: pro })
+        dispatch({ type: "ADD_PRODUCT", product: pro })
     }
     const RemoveProduct = () => {
-        dispatch({ type: "REMOVE_PRODUCT", data: pro })
+        dispatch({ type: "REMOVE_PRODUCT", product: pro })
     }
     const UpdateProduct = () => {
-        dispatch({ type: "UPDATE_PRODUCT", index, data: pro })
+        dispatch({ type: "UPDATE_PRODUCT", index, product: pro })
     }
     return (<>
         Product:---  {state.product.join()}

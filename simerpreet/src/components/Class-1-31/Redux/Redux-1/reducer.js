@@ -3,6 +3,7 @@ let initialState = {
 }
 
 const counterReducer = (state = initialState, action) => {
+    console.log("reducer called",state.count)
     if (action.type === "INCREMENT") {
         return { ...state, count: state.count + 1 }
     }

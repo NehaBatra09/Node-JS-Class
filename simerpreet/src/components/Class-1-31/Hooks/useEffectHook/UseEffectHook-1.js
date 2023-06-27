@@ -10,6 +10,7 @@ export const UseEffectHook = () => {
     useEffect(() => {
         console.log("First Render")
     }, [])
+    
     useEffect(() => {
         console.log("On Count Change Render")
     }, [count])

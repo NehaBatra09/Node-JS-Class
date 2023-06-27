@@ -1,20 +1,21 @@
 import React from "react";
 import { useSelector, useDispatch } from 'react-redux'
-import { Increment, Decrement } from "./action";
+// import { Increment, Decrement } from "./action";
+// import axios from 'axios'
 export const Counter = () => {
-    const dispatch = useDispatch()
-    const { count } = useSelector(state => state)
+    // const dispatch = useDispatch()
+    const state = useSelector(state => state)
+    const dispatch=useDispatch()
+    console.log(state)
 
     const IncrementVal = () => {
-        dispatch(Increment({ type: "INCREMENT" }))
+        dispatch({type:"INCREMENT"})
     }
-    const DecrementVal = () => {
-        dispatch(Increment({ type: "DECREMENT" }))
-    }
+   
 
     return (<>
-        {count}<br />
+        Login:{state.count}<br />
         <button onClick={IncrementVal}>Increment</button>
-        <button onClick={DecrementVal}>Decrement</button>
+        {/* <button >Decrement</button> */}
     </>)
 }

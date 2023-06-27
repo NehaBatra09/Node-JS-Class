@@ -9,12 +9,19 @@ export const UseMemoHook = () => {
     }, 3000);
 
     const processData = useMemo(() => {
-        console.log("Render process data")
-        return data.filter((dt) => dt > 3)
+        console.log("hello..")
+        return data.filter((item) => item > 3)
     }, [data])
+    
+    const AddData = () => {
+        setData([...data,"90"])
+    }
+
+
     return (<>
         {count}
         <br />
+        <button onClick={AddData}>Add data</button>
         {processData.map((ele) => <li>{ele}</li>)}
 
     </>)

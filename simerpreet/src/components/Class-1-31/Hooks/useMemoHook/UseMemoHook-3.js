@@ -1,24 +1,34 @@
-import React, { useMemo } from 'react';
+import React, { useMemo, useState } from 'react';
 
-const ExpensiveComponent = () => {
-    // Expensive calculations or heavy rendering logic
 
-    return <div>Expensive Component</div>;
-};
 
 export const UseMemoHook3 = () => {
-    const memoizedComponent = useMemo(() => {
+    const [count, setCount] = useState(0)
+    const [togle, setToggle] = useState(false)
+
+    setInterval(() => {
+        setCount(pre => pre + 1)
+    }, 2000);
+    const MemoizedComponent = useMemo(() => {
+        console.log("hello")
         return <ExpensiveComponent />;
-    }, []);
+    },[togle])
 
     return (
         <div>
             <h2>Parent Component</h2>
-            {memoizedComponent}
+            {MemoizedComponent}
+            <button onClick={() => setToggle(!togle)}>Toggle</button>
         </div>
     );
 };
 
+const ExpensiveComponent = () => {
+
+    let c = 100 * 100 * 100 * 1000
+
+    return <div>{c} Expensive Component</div>;
+};
 
 
 

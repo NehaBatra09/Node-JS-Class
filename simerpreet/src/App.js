@@ -1,39 +1,60 @@
-import React, { Suspense, useEffect, useState } from 'react';
+import React from 'react';
 import './style.css';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import { UserReducerCounter, UserReducerProduct } from './components/Class-1-31/Redux/UserReducerEx';
-// import { TodoHeader } from './components/Projects/Todo-1/TodoHeader';
-// import { TodoHead, TodoInSinglFile } from './components/Projects/Todo/TodoInSinglFile';
-// import { TodoContent } from './components/Projects/Todo-1/TodoContent';
-// import { UserReducerCounter, UserReducerEx } from './components/Class-1-31/Redux/UserReducerEx';
-// import { Counter } from './components/Class-1-31/Redux/Redux-1/Counter';
 import { Provider } from 'react-redux';
-import UserReducer from './components/Class-1-31/Redux/UserReducer-2';
-import { UseCallback1, UseEffectHook4 } from './components/Class-1-31/Hooks/useEffectHook/UseEffectHook-4';
-// import { UseEffectHook } from './components/Class-1-31/Hooks/useEffectHook/UseEffectHook-3';
-// import { store /} from './components/Class-1-31/Redux/Redux-1/store';
-// import { TodoHeader/ } from './components/Projects/Todo/TodoHeader';
-// import { Parent } from './components/Parent';
-// import { TodoContent } from './components/Projects/Todo/TodoContent';
+import { store } from './components/Class-1-31/Redux/Redux-1/store';
+import { Counter } from './components/Class-1-31/Redux/Redux-1/Counter';
+import { Todo } from './components/Class-1-31/Redux/Redux-1/Todo';
+import { UserReducerProduct } from './components/Class-1-31/Redux/UserReducerEx';
+import { UseEffectHook } from './components/Class-1-31/Hooks/useEffectHook/UseEffectHook-3';
+import { UseMemoHook2 } from './components/Class-1-31/Hooks/useMemoHook/UseMemoHook-2';
+import { UseCallBackHooK2 } from './components/Class-1-31/Hooks/useCallBackHook/UseCallBackHook-2';
+import { UseCallback3 } from './components/Class-1-31/Hooks/useCallBackHook/UseCallBackHook-3';
+import { UseCallbackHook4 } from './components/Class-1-31/Hooks/useCallBackHook/UseCallBackHook-4';
+import { UseCallback5 } from './components/Class-1-31/Hooks/useCallBackHook/UseCallBackHook-5';
+import { UseMemoHook } from './components/Class-1-31/Hooks/useMemoHook/UseMemoHook-1';
+import { UseMemoHook3 } from './components/Class-1-31/Hooks/useMemoHook/UseMemoHook-3';
+// import { UseMemoHook2 } from './components/Class-1-31/Hooks/useMemoHook/UseMemoHook-2';
+// import { UseEffectHook } from './components/Class-1-31/Hooks/useEffectHook/UseEffectHook-1';
+
 
 export default function App() {
 
 
-    const [todo, setTodoList] = useState([])
-    const [updatedTodoList, setUpdatedTodoList] = useState([])
-    const [filterStatus, setFilterStatus] = useState(false)
+    // const [todo, setTodoList] = useState([])
+    // const [updatedTodoList, setUpdatedTodoList] = useState([])
+    // const [filterStatus, setFilterStatus] = useState(false)
+
+
+
 
     return (<>
-        <UseCallback1/>
+        <UseCallbackHook4/>
+        {/* <UseMemoHook3/> */}
+        
+        
+
+        {/* <UseCallback5/> */}
+        {/* <UseCallBackHooK2/> */}
+
+
+        {/* <Provider store={store}>
+            <Counter />
+            <Todo />
+        </Provider> */}
+        {/* <UseMemoHook/> */}
+        {/* <UseMemoHook2/> */}
+
+
+        {/* <UseCallback1/> */}
         {/* <UseEffectHook4/> */}
         {/* <UserReducer /> */}
+        {/* <UseEffectHook/> */}
 
         {/* <UserReducerCounter /> */}
         {/* <UserReducerProduct /> */}
 
-        {/* <Provider store={store}>
-            <Counter />
-        </Provider> */}
+
+
 
         {/* <Parent/> */}
 
