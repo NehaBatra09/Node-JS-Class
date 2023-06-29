@@ -1,27 +1,26 @@
 import React from "react";
 
-export class Class2 extends React.PureComponent {
+export class Class2 extends React.Component {
     constructor() {
         super()
         this.state = {
-            name: "neha"
+            name: "neha",
+            userList:[]
         }
         // debugger
     }
     componentDidMount() {
-        setTimeout(() => {
-            this.setState({ name: "hena" })
-        }, 2000);
-        // debugger
+       console.log("did mount")
     }
-   
+    shouldComponentUpdate() {
+        console.log("shouldcomponent update")
+        return true
+   }
+
     componentDidUpdate() {
         console.log(this.state.name)
-        // debugger
-        setInterval(() => {
-            this.setState({ name: "kanu" })
-        }, 2000);
-        // debugger
+        this.state.userList.push(this.state.name)
+        console.log("did  update..",this.state.userList)
     }
     componentWillUnmount() {
         console.log("Unmounting phase")
@@ -29,7 +28,10 @@ export class Class2 extends React.PureComponent {
     }
     render() {
 
-        return (<h1 >{this.state.name}</h1>)
+        return (<h1 >{this.state.name}
+        <button onClick={()=>this.setState({name:"kavita"})}>Change User Name</button>
+        
+        </h1>)
     }
 
 }
