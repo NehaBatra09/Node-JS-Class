@@ -1,4 +1,3 @@
-import { useScrollTrigger } from "@mui/material";
 import React, { useEffect, useState } from "react";
 import axios from "axios";
 export const MyPost = () => {
@@ -7,7 +6,7 @@ export const MyPost = () => {
 
     useEffect(() => {
         handleGetData()
-    },[])
+    }, [])
 
     const handlePost = () => {
         let post = {
@@ -21,7 +20,7 @@ export const MyPost = () => {
 
     }
 
-    const handleGetData = async() => {
+    const handleGetData = async () => {
         let res = await axios.get("http://localhost:5000/post")
         console.log(res)
     }
@@ -30,5 +29,4 @@ export const MyPost = () => {
         <input type="text" onChange={(e) => setDesciption(e.target.value)} /><br />
         <button onClick={handlePost}>Submit Post</button>
     </>)
-
 }
