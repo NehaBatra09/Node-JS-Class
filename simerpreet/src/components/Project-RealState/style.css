@@ -1,0 +1,15 @@
+.navColor{
+    position: fixed;
+    /* display: flex; */
+    /* flex-direction: row; */
+    /* justify-content: space-between;  */
+    background-color: rgb(186, 16, 16);   
+}
+.navTransparent
+{
+    position: fixed;
+    /* display: flex; */
+    /* flex-direction: row; */
+    /* justify-content: space-between;  */
+    background-color:gold;   
+}

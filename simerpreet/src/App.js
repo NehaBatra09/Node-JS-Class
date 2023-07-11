@@ -1,21 +1,26 @@
-import React from "react";
-import { CallBack2 } from "./components/Class-1-31/CallbackAndPromises/Callback2";
-import { Promise1 } from "./components/Class-1-31/CallbackAndPromises/Promise1";
-import { Promise2 } from "./components/Class-1-31/CallbackAndPromises/Promise2";
-import { Promise3 } from "./components/Class-1-31/CallbackAndPromises/Promise3";
-import { AsyncAwait } from "./components/Class-1-31/CallbackAndPromises/AsynAwait";
-import Posts from "./Class29-1/Posts";
-import { CallBack1 } from "./components/Class-1-31/CallbackAndPromises/Callback1";
-import { Promise4 } from "./components/Class-1-31/CallbackAndPromises/Promise4";
-import ComponentDidMouneCycle from "./components/Class-1-31/LifeCycle/ComponentDidMount1";
+import React, { useEffect, useState } from "react";
+import { NavBar } from "./components/Project-RealState/Header";
+import { BrowserRouter } from "react-router-dom";
+import { HighOderCom } from "./components/Project-RealState/HighOrderCom";
+import { Comp1 } from "./components/Project-RealState/Comp1";
+import { Comp2 } from "./components/Project-RealState/Comp2";
+import { Comp3 } from "./components/Project-RealState/Comp3";
 const App = () => {
-
+    
+    let First = HighOderCom(Comp1)
+    let Second = HighOderCom(Comp2)
+    let Third=HighOderCom(Comp3)
 
     return (<>
-        <ComponentDidMouneCycle/>
-
+        <BrowserRouter>
+            <Second/>
+        </BrowserRouter>
+        
+        <div className={"scroll"} id="main" >
+            <img src="https://thumbs.dreamstime.com/z/beautiful-exterior-home-pictures-new-home-design-images-modern-best-house-design-images-best-house-images-images-latest-172194515.jpg" />
+        </div>
     </>)
 
-    
+
 }
 export default App
