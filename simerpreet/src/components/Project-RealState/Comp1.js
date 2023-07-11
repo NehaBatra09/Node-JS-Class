@@ -9,3 +9,6 @@ export const Comp1 = () => {
         </div>
     </>)
 }
+
+//Follow this link for font awesome
+// https://www.positronx.io/how-to-add-and-use-font-awesome-in-react-app/
